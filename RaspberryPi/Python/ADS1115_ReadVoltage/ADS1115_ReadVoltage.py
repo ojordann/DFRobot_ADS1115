@@ -17,4 +17,4 @@ app = Flask(__name__)
 def getHeartRate():
     ads1115.setAddr_ADS1115(0x48)
     ads1115.setGain(ADS1115_REG_CONFIG_PGA_6_144V)
-    return ads1115.readVoltage(0)['r']
+    return str(ads1115.readVoltage(0)['r'])
